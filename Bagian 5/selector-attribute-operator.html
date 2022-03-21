@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+</head>
+<body>
+    <div class="eno"> Eno</div>
+    <div class="enokehed">kehed</div>
+    <div class="enoaja">aja</div>
+
+    <script>
+        const list = document.querySelectorAll
+        ("div[class^=eno]");
+        console.log(list);
+    </script>
+</body>
+</html>

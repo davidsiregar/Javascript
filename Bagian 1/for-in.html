@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object
+        const person={
+            firstName:"budi",
+            middleName:"saja",
+            lastName:"ya"
+        };
+
+        for (const property in person)
+        {
+            document.writeln(`<p>${property}: ${person[property]}</p>`);
+        }
+
+        const name=["budi", "saja", "ya"];
+        for(const index in name)
+        {
+            document.writeln(`<p> ${index} : ${name[index]}</p>`);
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+        const names=["ds", "aja", "ya", "hsd", "kek"];
+        const [firstName, middleName,lastName, ...others]=names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        console.log(others);
+        }
+
+        {
+            const person={
+                firstName:"eno",
+                lastName:"bening",
+                address:{
+                    street:"jalan aja",
+                    city:"jakarta",
+                    country:"indo"
+                },
+                hobby:"pubg",
+                channel:"none"
+            };
+            let {firstName,lastName,address:{city,street,country}, ...others}=person;
+            console.log(firstName);
+            console.log(lastName);
+            console.log(city);
+            console.log(street);
+            console.log(country);
+            console.log(others);
+
+        }
+        //(1)
+        {
+            function displayPerson({firstName, middleName,lastName})
+            {
+                console.log(firstName);
+                console.log(middleName);
+                console.log(lastName);
+            }
+
+            const person={
+                firstName:"eno",
+                middleName:"bening",
+                lastName:"aja"
+            };
+
+            displayPerson(person);
+        }
+       // (2)
+        {
+            function sum([first,second])
+            {
+                return first+second;
+            }
+            console.log(sum([1,8]));
+        }
+
+        // default value
+        {
+            const names=["eno", "bening"];
+            const [firstName,middleName,lastName="aja"]=names;
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+
+        {
+            const person={
+                firstName:"eno",
+                lastName:"bening",
+                
+            };
+            let {firstName,middleName="aka", lastName}=person;
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+           
+
+        }
+
+        // mengunakan variable lain
+        {
+            const person={
+                firstName:"by",
+                middleName:"aja",
+                lastName:"ds"
+                
+            };
+
+            let { firstName:namaDepan,
+            middleName:namaTengah="aja",
+            lastName:namaBelakang}=person;
+
+            console.log(namaDepan);
+            console.log(namaTengah);
+            console.log(namaBelakang);
+        }
+
+
+    </script>
+</body>
+</html>

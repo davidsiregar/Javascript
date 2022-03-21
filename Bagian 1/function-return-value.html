@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, lastName)
+        {
+            const say= `hello ${firstName} ${lastName}` ;
+            return say;
+           // document.writeln(`hello ${firstName}, ${lastName}`);
+        }
+       const result= sayHello("eno", "bening");
+       document.writeln(`${result}`);
+
+       function getFinalValue(value)
+       {
+           if(value>90)
+           {
+               return 'A';
+           }
+           else if(value>80)
+           {
+               return 'B';
+           }
+           else if(value>70)
+           {
+               return 'C';
+           }
+          
+       }
+       const finalValue=getFinalValue(95);
+           document.writeln(`${finalValue}`);
+
+           
+           function isContains(array,searchValue)
+           {
+               for(const element of array)
+               {
+                   if(element ===searchValue)
+                   {
+                       return true;
+                   }
+                   
+               }
+               return false;
+           }
+           const array=[1,3,3,4,5,543,2,2,3,4534,64,77];
+           const search= 77;
+           const found=isContains(array, search);
+           document.writeln(`${found}`);
+    </script>
+</body>
+</html>

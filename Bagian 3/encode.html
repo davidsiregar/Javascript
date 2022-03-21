@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // encode: menjadi hasil data
+        // decode : mengembalikan encode
+
+        // encode url & decode url
+
+        {
+        const url ="http://contoh.com/?name=Eno Kurniaan meiga";
+        console.log(url);
+
+        const encoded = encodeURI(url);
+        console.log(encoded);
+
+        const decoded = decodeURI(encoded);
+        console.log(decoded);
+        }
+
+
+        {
+            // encode url & decode url
+
+        const value="Eno Kurniaan meiga";
+        const url ="http://contoh.com/?name=";
+        console.log(url+ value);
+
+        const encoded = encodeURI(url);
+        console.log(url+encoded);
+
+        const decoded = decodeURI(encoded);
+        console.log(url+decoded);
+        }
+    </script>
+</body>
+</html>

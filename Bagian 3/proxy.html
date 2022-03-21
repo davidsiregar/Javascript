@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const target ={
+            middleName:"kurnia mega"
+        };
+
+        const handler = {
+            get: function(target, property)
+            {
+                console.log(`access property :${property}`);
+                return target[property];
+            },
+            set: function(target,property,value)
+            {
+                console.log(`change property ${property}`);
+                if(value== null)
+                {
+                    target[property]="";
+                }
+                else
+                {
+                    target[property]=value;
+                }
+            }
+        };
+
+        const proxy = new Proxy(target,handler);
+        proxy.firstName ="eno";
+        proxy.lastName="null";
+
+        console.log(proxy.firstName);
+        console.log(proxy.lastName);
+        console.log(target);
+
+    </script>
+</body>
+</html>

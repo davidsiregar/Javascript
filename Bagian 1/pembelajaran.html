@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dasar</title>
+</head>
+<body>
+    <script>
+        // 15
+    let array=[];
+    let arrayName=["david", "siregar"];
+
+    const names=[];
+    names.push("daud");
+    names.push("tegar", "paku");
+
+    console.table(names);
+
+    console.log(names[1]);
+    names[0]="bdui";
+    console.log(names);
+
+    delete names[2];
+    console.log(names);
+
+    names.push("boy");
+    console.table(names);
+
+        //16
+        const person={
+        "nama": "davdds",
+        "alamat": "gry",
+        "umur":11
+
+        };
+        // ubah properti
+    ///person["nama"]= "davids";
+//    person["alamat"]= "griya";
+
+        console.log(`nama: ${person["nama lengkap"]}`);
+        console.log(`alamat: ${person.alamat}`);
+        console.log(`umur: ${person.umur}`);
+
+
+    console.table(person);
+
+    delete person["alamat"];
+    console.table(person);
+
+    //17 
+    const examvalue=55;
+
+    if(examvalue>80)
+    {
+    document.writeln("<p>good</p>");
+    }
+    else
+    document.writeln("<p>try</p>");
+
+    </script>
+</body>
+</html>

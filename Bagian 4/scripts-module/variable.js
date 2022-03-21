@@ -1,0 +1,1 @@
+export const name = "eno kehed aja";

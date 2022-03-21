@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            // create regex
+
+            const regex1 = /eno/;
+            const regex2 = new RegExp("eno");
+            const regex3 = new RegExp(/eno/);
+        }
+
+        {
+            // test regex
+            const name = "eno aja ya";
+            const regex = /eno/;
+
+            const result = regex.exec(name);
+            console.log(result);
+            console.log(regex.exec("tidak ada"));
+
+            const test = regex.test(name);
+            console.log(test);
+            console.log(regex.test("tidak ada"));
+        }
+
+        {
+            // regex modifier
+            const name = "eno kurniawan\nENo khehed\nEdi kurniawan";
+            const regex1 = /eno/ig;
+            const regex2 = /kurniawan/ig
+
+            let result;
+            while (result = regex1.exec(name) !== null) {
+                console.log(result);
+
+            }
+
+            while ((result = regex2.exec(name)) !== null) {
+                console.log(result);
+            }
+        }
+
+        {
+            // advanced regex
+            const regex = /en[aiueo]/ig
+
+            const name = "eno eki eni enu ena ea jo ene";
+            let result;
+            while ((result = regex.exec(name)) !== null) {
+                console.log(result);
+            }
+        }
+
+        {
+            const name = "eni eno ene ena enu edo kun";
+
+            console.log(name.match(/en[aiueo]/ig));
+            console.log(name.search(/en[aiueo]/ig));
+            console.log(name.replace(/en[aiueo]/i), "kamu");
+            console.log(name.replaceAll(/en[aiueo]/ig, "kamu"));
+            console.log(name.split(/e/ig));
+
+        }
+    </script>
+</body>
+
+</html>

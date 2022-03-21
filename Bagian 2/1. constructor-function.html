@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // huruf besar
+        //constructor function
+        // function Person() {
+        //     this.firstName = "";
+        //     this.lastName = "";
+        //     this.sayHello = function (name) {
+        //         console.log(`Hello ${name}, my name is ${this.firstName}`);
+        //     }
+        // }
+
+        // const eno = new Person();
+        // eno.firstName = "eno";
+        // eno.lastName = "bening";
+        // eno.sayHello("jokowi");
+
+        // const ds = new Person();
+        // ds.firstName = "ds";
+        // ds.lastName = "aja";
+        // ds.sayHello("kemas");
+
+        // console.log(eno);
+        // console.log(ds);
+
+        // ringkas
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName} ${this.lastName} `);
+            }
+        }
+
+        const eno = new Person("eno", "budi");
+        eno.sayHello("jokowi");
+
+        const ds = new Person("boys", "girls");
+        ds.sayHello("kemas");
+
+
+    </script>
+</body>
+
+</html>

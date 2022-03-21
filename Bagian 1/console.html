@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console</title>
+</head>
+
+<body>
+    <script>
+        console.info("hello world");
+        console.error("test");
+        console.warn("test");
+        console.debug("test");
+
+
+        const name = "davids";
+        const template = `name : ${name}`;
+        console.info(template);
+
+        const nilai = 56;
+        const template2 = `name : ${name}, lulus : ${nilai > 78}`;
+
+        console.info(template2);
+
+        const multiline = `dfhjdfh ewfoewr nama saya budi saja 
+        yang harusnya `;
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+        // bab 1 , 13
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.write(`<p> ${sum} </p>`);
+
+        document.write(`<p> ${parseInt("1.1")} </p>`); // string-> bil.bulat
+        document.write(`<p> ${parseFloat("1.1")} </p>`);// string-> bil. desimal
+        document.write(`<p> ${Number(1.1)} </p>`);// string-> numeric
+
+        const a = 1;
+        const b = 1;
+
+        const total = a.toString() + b.toString(); //numeric->string
+        document.writeln(`<p> ${total}</p>`);
+
+        document.write(`<p> ${parseInt("salah")} </p>`); // string-> bil.bulat
+        document.write(`<p> ${parseFloat("1.1boy")} </p>`);// string-> bil. desimal
+        document.write(`<p> ${Number("1.1dgfd")} </p>`);// string-> numeric
+        document.write(`<p> ${Number("ujkhfd")} </p>`);// string-> numeric
+
+        const first = Number("salah");
+        const totalNumber = first + 100;
+        document.writeln(`<p>${totalNumber}</p>`);
+
+        document.writeln(`<p>${isNaN(first)}</p>`);
+        document.writeln(`<p>${isNaN(100)}</p>`);
+        document.writeln(`<p>${isNaN(NaN)}</p>`);
+
+
+    </script>
+</body>
+
+</html>
